@@ -1,6 +1,6 @@
 ﻿using CwAPI3D.Net.Bridge;
 using System;
-using System.Windows; // Add this for WPF types
+using System.Windows;
 
 namespace sharpLib
 {
@@ -18,6 +18,11 @@ namespace sharpLib
         var elementIDs = elementController.GetVisibleIdentifiableElementIDs();
 
         elementIDs.ForEach(id => Console.WriteLine($@"element with DB id {id}"));
+        
+        Point3D point1 = new Point3D(0, 0, 0);
+        Point3D point2 = new Point3D(1000.0, 0.0, 0.0);
+        Vector3D vec = Vector3D.FromPoints(point1, point2).Normalize();
+        Console.WriteLine($@"Vector from {point1} to {point2} is {vec}");
 
         //var window = new WpfApp.MainWindow();
         //window.Show();
