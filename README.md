@@ -77,12 +77,12 @@ public class Initializer
             
             // ....
             // Initialize API
-            var wrapper = new CwApi3DFactory(nativeFactory);
+            var wrapper = new CwApi3DFactory(nativeFactory); 
             var text = wrapper.GetSomething();
             Console.WriteLine(@"Received from native factory: " + text);
             
             // Get specific controller
-            var elementController = apiInstance.GetElementController();
+            var elementController = wrapper.GetElementController();
             
             // Use the controller
             var allElements = elementController.GetAllIdentifiableElementIDs();

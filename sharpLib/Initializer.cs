@@ -1,5 +1,6 @@
 ﻿using CwAPI3D.Net.Bridge;
 using System;
+using System.Linq;
 using System.Windows;
 
 namespace sharpLib
@@ -18,6 +19,13 @@ namespace sharpLib
                 var elementIDs = elementController.GetVisibleIdentifiableElementIDs();
 
                 elementIDs.ForEach(id => Console.WriteLine($@"element with DB id {id}"));
+                
+                //TODO impelmentation of attribute controller
+                // var filteredIDs = elementIDs.FindAll(id => attributeController.GetName(id) == "SomeAttributeName");
+                
+                // var ids = from id in elementIDs
+                //     where attributeController.GetName(id) == "SomeAttributeName"
+                //     select id;
 
                 Point3D point1 = new Point3D(0, 0, 0);
                 Point3D point2 = new Point3D(1000.0, 0.0, 0.0);
